@@ -1,0 +1,27 @@
+.editar-concierto-container{
+    width: 970px;
+    min-height: 100vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.contenedor-card{
+    display: flex
+}
+.concierto-card{
+    width: 30%;
+    margin: 5px;
+    text-align: center;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: var(--fondo);
+}
+.concierto-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}

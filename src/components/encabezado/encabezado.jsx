@@ -9,6 +9,7 @@ import Administrar from "../../pages/administrar/administrar";
 import VistaConcierto from "../../pages/vistaConcierto/vistaConcierto";
 import CrearPersonal from "../../pages/CrearPersonal/CrearUsuario";
 import Personal from "../../pages/personal/personal";
+import EliminarConcierto from "../../pages/ediar-concierto/EliminarConcierto";
 
 const Encabezado = () => {
   const [noLog, setNoLog] = useState(true);
@@ -45,6 +46,9 @@ const Encabezado = () => {
     // Simular carga durante 5 segundos
     await new Promise((resolve) => setTimeout(resolve, 700));
     setMostrarCarga(false);
+
+    // Desplazarse al top después de hacer clic en un enlace
+    window.scrollTo({ top: 0 });
 
     // Cerrar el menú después de hacer clic en un enlace
     handleCloseMenu();
@@ -114,13 +118,13 @@ const Encabezado = () => {
                     </li>
                     <li>
                       <Link
-                        to="/EditarConciertos"
+                        to="/Eliminar Concierto"
                         onClick={() => {
                           handleClick();
-                          navigate("/EditarConciertos");
+                          navigate("/EliminarConcierto");
                         }}
                       >
-                        Editar Conciertos
+                        Eliminar Conciertos
                       </Link>
                     </li>
                     <li>
@@ -155,6 +159,7 @@ const Encabezado = () => {
         <Route path="/Administrar" element={<Administrar />} />
         <Route path="/CrearPersonal" element={<CrearPersonal />} />
         <Route path="/Personal" element={<Personal />} />
+        <Route path="/Eliminar concierto" element={<EliminarConcierto />} />
       </Routes>
     </>
   );
