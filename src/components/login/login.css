@@ -1,0 +1,130 @@
+.form-login{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.form-login label{
+    color: var(--blanco);
+    cursor: pointer;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.form-login input{
+    margin: 10px;
+    outline: 1px solid var(--bordesA);
+    padding: 4px;
+    border-radius: 2px;
+    border: none;    
+    font-size: 0.8em;
+    background: var(--inputColor);
+    width: 150px;
+}
+.btn-login{
+    background: var(--btnRojoC);
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
+    padding: 5px ;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn-login:hover{
+    transition: .2s;
+    transform: scale(1.1);
+    background: var(--btnRojo);
+}
+.btn-registro{
+    background: var(--btnRojoC);
+    color: var(--blanco);
+    border: 2px solid var(--blanco);
+    padding: 5px ;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn-registro:hover{
+    transition: .2s;
+    transform: scale(1.1);
+    background: var(--btnRojo);
+}
+
+
+/* registro */
+
+.fondo-registro{
+    position: fixed;
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    top: 80px;
+    background: var(--transparente);
+    width: 100%;
+    height: calc(100% - 80px);
+    z-index: 2;
+}
+.fondo-registro h2{
+    color: var(--blanco);
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cuadro-registro{
+    background: var(--rojoTransparente);
+    height: max-content;
+    width: 400px;
+    padding: 20px;
+    margin: 80px auto;
+    position: relative;
+    text-align: start;
+    z-index: 2;
+}
+.cuadro-registro label{
+    color: var(--blanco);
+    cursor: pointer;
+    font-size: 1.1em;
+}
+.cuadro-registro input{
+    margin: 10px 0px;
+    outline: 1px solid var(--bordesA);
+    padding: 6px;
+    border-radius: 2px;
+    border: none;    
+    font-size: 0.8em;
+    background: var(--inputColor);
+    width: 100%;
+}
+.cuadro-registro select{
+    margin: 10px 0px;
+    outline: 1px solid var(--bordesA);
+    padding: 4px;
+    border-radius: 2px;
+    border: none;    
+    font-size: 0.8em;
+    background: var(--inputColor);
+    width: 100%;
+}
+.btn-envio-info{
+    width: max-content;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    font-size: 1.2em;
+}
+
+.btn-cerrar{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    cursor: pointer;
+    background: var(--fondoRojo);
+    border-radius: 50%;
+}

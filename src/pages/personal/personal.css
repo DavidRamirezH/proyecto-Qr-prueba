@@ -1,0 +1,65 @@
+/* personal.css */
+
+.personal-container {
+    width: 970px;
+    min-height: 100vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rol-card {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.rol-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rol-header h2 {
+    margin: 0;
+    width: 30%;
+}
+
+.numeros-empleados {
+    font-weight: bold;
+}
+
+.empleados-list {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.empleado-card {
+    width: 30%;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.empleado-card p{
+    font-size: 14px;
+    padding: 6px;
+    background-color: var(--fondo);
+}
+.empleado-card p b{
+    font-size: 16px;
+}
+.empleado-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+/* Otros estilos según tus necesidades */

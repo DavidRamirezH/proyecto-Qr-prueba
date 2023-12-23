@@ -1,0 +1,88 @@
+.banner-concierto{
+    width:1280px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    height: 50vh;
+    object-fit: cover;
+}
+.info{
+    width: 1280px;
+    margin: auto;
+    color: var(--letra);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titulo{
+    width: 1280px;
+    margin: auto;
+    color: var(--letra);
+}
+.btn-comprar{
+    padding: 10px;
+    font-size: 1.2em;
+    background: var(--hoverComprar);
+    color: var(--blanco);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.btn-comprar:hover{
+    background: var(--btnComprar);
+}
+.info h2{
+    margin: 10px 0;
+}
+.info h3{
+    margin: 0 0 10px;
+    background: var(--fondoBtn);
+    padding: 5px 30px 5px 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+}
+.info h3 img{
+    margin: 0 5px;
+    width: 25px;
+    height: 25px;
+}
+/* zonas */
+.zona-title{
+    width: 1280px;
+    margin: auto;
+}
+.mapa-lugar{
+    margin: auto;
+    width: 750px;
+    height: 750px;
+    object-fit: cover;
+    display: block;
+}
+.descripcion-concierto{
+    width: 1280px;
+    margin: 20px auto;
+}
+
+.hr{
+    width: 98%;
+    border: 1px solid rgb(194, 193, 193);
+    margin: auto;
+}
+
+/* info venta */
+
+.info-venta{
+    width: 1280px;
+    margin: 50px auto;
+}
+.info-venta h3{
+    margin: 15px 0;
+}
+.info-venta p{
+    margin: 5px 0;
+}

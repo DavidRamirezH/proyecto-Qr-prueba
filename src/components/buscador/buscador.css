@@ -1,0 +1,8 @@
+.buscador label{
+    color: var(--blanco);
+}
+.buscador input{
+    outline: none;
+    width: 100%;
+    margin: 5px;
+}

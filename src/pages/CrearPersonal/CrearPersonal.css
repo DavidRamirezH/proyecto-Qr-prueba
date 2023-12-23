@@ -1,0 +1,72 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.crear-personal-container {
+    width: 970px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .crear-personal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .contenedor-foto{
+    text-align: center;
+    object-fit: contain;
+    height: 400px;
+    background: var(--fondo);
+    margin-bottom: 50px;
+  }
+  .contenedor-foto label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .contenedor-foto img{
+    object-fit: contain;
+    height: 400px;
+    width: 100%;
+  }
+  
+  .contenedor-foto label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: var(--blanco);
+  }
+  button {
+    background-color: var(--btnRojo);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--btnRojoC);
+  }
