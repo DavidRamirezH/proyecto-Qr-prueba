@@ -86,3 +86,16 @@
 .info-venta p{
     margin: 5px 0;
 }
+
+
+@media (max-width:1280px) {
+    .banner-concierto{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+    }
+    .descripcion-concierto{
+        width: 100%;
+    }
+}
