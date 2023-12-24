@@ -91,11 +91,29 @@
 @media (max-width:1280px) {
     .banner-concierto{
         width: 100%;
+        object-fit: contain;
+        height: max-content;
     }
     .info{
         width: 100%;
+        padding: 10px;
     }
     .descripcion-concierto{
         width: 100%;
+        padding: 10px;
+    }
+    .titulo{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width:750px) {
+    .mapa-lugar{
+        width: 100%;
+        height: auto;
+    }
+    .info{
+        flex-direction: column;
     }
 }
