@@ -10,8 +10,12 @@ import VistaConcierto from "../../pages/vistaConcierto/vistaConcierto";
 import CrearPersonal from "../../pages/CrearPersonal/CrearUsuario";
 import Personal from "../../pages/personal/personal";
 import EliminarConcierto from "../../pages/ediar-concierto/EliminarConcierto";
+import { InfoUser } from "../conexion/peticiones";
 
-const Encabezado = () => {
+const Encabezado = (rol) => {
+  console.log(rol);
+
+  const [rolPerson,setRolPerson] = useState(rol)
   const [noLog, setNoLog] = useState(true);
   const [admin, setAdmin] = useState(true);
   const [mostrarCarga, setMostrarCarga] = useState(false);
@@ -20,6 +24,15 @@ const Encabezado = () => {
   const location = useLocation();
 
   const token = localStorage.getItem("token");
+
+  // extraer si el roll de usuario
+  useState(()=>{
+    InfoUser()
+  },[])
+  // cambiar estado de rol
+  if(rol){
+    console.log(rol);
+  }
 
   useEffect(() => {
     if (token) {

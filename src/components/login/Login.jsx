@@ -24,10 +24,18 @@ export default function Login(){
 
       };
 
+      // login
+      const [loginVisible, setLoginVisible]= useState(true)
+
+      const MostrarLogin = () =>{
+        if(loginVisible){
+          setLoginVisible(false)
+        }else{
+          setLoginVisible(true)
+        }
+      }
 
       // formulario
-
-
       const [visible, setVisible]= useState(false)
 
       const menuRegistro = () =>{
@@ -66,7 +74,10 @@ export default function Login(){
 
       return (
         <>
-          <form onSubmit={handleSubmit} className='form-login'>
+        <div className='cont-login'>
+          <h3 className='mostrar-modal' onClick={MostrarLogin}>Ingresar</h3>
+          <form onSubmit={handleSubmit} className={ loginVisible?`form-login` : "form-login mostrar-Login"}>
+            <h2>Ingresa Tus Datos</h2>
             <label>
               Correo:
               <input
@@ -91,7 +102,7 @@ export default function Login(){
             <button className='btn-login' type="submit">Ingresar</button>
             <p type="butto" className='btn-registro' onClick={menuRegistro}>Registrarse</p>
           </form>
-          
+        </div>
           {/* registro */}
 
         <section className="fondo-registro" style={{display:`${visible ? "block" : "none"}`}}>

@@ -27,6 +27,7 @@ const singIn = async (email, password) => {
       const userCredential = await signInWithEmailAndPassword(Auth, email, password);
       const user = userCredential.user;
       localStorage.setItem("token", user.uid);
+      console.log(user);
       window.location.href = "/"
     } catch (error) {
       const errorCode = error.code;

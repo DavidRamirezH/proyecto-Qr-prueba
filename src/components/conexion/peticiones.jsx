@@ -1,41 +1,37 @@
-import { useEffect, useState } from 'react';
-import { collection, addDoc , getDoc, getDocs, deleteDoc, updateDoc, setDoc, doc } from "firebase/firestore"; 
+import { doc, getDoc, setDoc } from "firebase/firestore"; 
 import { db } from './conexion';
+import Encabezado from '../encabezado/encabezado';
 
 // base de datos informacion de usuario
-const DatosUSer = async(formulario, userID) =>{
-    console.log(formulario);
-    console.log(userID);
-    try {
-        const docRef = await setDoc(doc(db, "users", `${userID}`), formulario);
-        localStorage.setItem("token", userID)
-
-        console.log(docRef.toString());
-     } catch (e) {
-        console.error("Error adding document: ", e);
-      }
+const DatosUSer = async (formulario, userID) => {
+  try {
+    const docRef = await setDoc(doc(db, "users", `${userID}`), formulario);
+    localStorage.setItem("token", userID)
+    console.log(docRef.toString());
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
 } 
-export {DatosUSer}
+export { DatosUSer }
 
 // mostrar infoUser
-
-const InfoUser = async() =>{
+const InfoUser = async () => {
   const id = localStorage.getItem("token")
 
   const docRef = doc(db, "users", id);
   const docSnap = await getDoc(docRef);
 
   if (docSnap.exists()) {
-    console.log("Document data:", docSnap.data());
+    console.log("rol", docSnap.data().rol);
+    // Cambié esta línea para no llamar directamente a Encabezado
+    return docSnap.data().rol;
   } else {
-    // docSnap.data() will be undefined in this case
     console.log("No such document!");
+    return null;
   }
 }
 
-export {InfoUser}
-
-
+export { InfoUser }
 
 // almacenamiento de conciertos
 const Conciertos = async (formulario, nombreConcierto) => {
@@ -60,8 +56,4 @@ const Conciertos = async (formulario, nombreConcierto) => {
   }
 };
 
-export {Conciertos}
-
-// ver concierto especifico 
-
-
+export { Conciertos };
